@@ -155,6 +155,15 @@ echo "    - cjson     : " $cjson
 echo "    - trepl     : " $trepl
 echo ""
 
+sudo luarocks install hdf5
+sudo luarocks install matio
+sudo luarocks install csvigo
+sudo luarocks install csv2tensor
+sudo luarocks install uuid
+sudo luarocks install moses
+sudo luarocks install basexx
+
+
 #will not work without cuda
 sudo luarocks install cutorch
 sudo luarocks install cunn
@@ -176,14 +185,6 @@ sudo luarocks install graph
 
 sudo luarocks install nngraph
 sudo luarocks install totem
-
-sudo luarocks install hdf5
-sudo luarocks install matio
-sudo luarocks install csvigo
-sudo luarocks install csv2tensor
-sudo luarocks install uuid
-sudo luarocks install moses
-sudo luarocks install basexx
 
 sudo luarocks install lzmq
 # will not work without ipython
