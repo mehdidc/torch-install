@@ -91,11 +91,10 @@ RET=$?; if [ $RET -ne 0 ]; then echo "Error. Exiting."; exit $RET; fi
 ($PREFIX/bin/luarocks install cutorch      ||  sudo -E $PREFIX/bin/luarocks install cutorch        ||   cutorch=failed )
 [ -n "$cunn" ] && \
 ($PREFIX/bin/luarocks install cunn         ||  sudo -E $PREFIX/bin/luarocks install cunn           ||   cunn=failed )
-
-$PREFIX/bin/luarocks install qtlua         ||  sudo -E $PREFIX/bin/luarocks install qtlua  
-RET=$?; if [ $RET -ne 0 ]; then echo "Error. Exiting."; exit $RET; fi
-$PREFIX/bin/luarocks install qttorch       ||  sudo -E $PREFIX/bin/luarocks install qttorch
-RET=$?; if [ $RET -ne 0 ]; then echo "Error. Exiting."; exit $RET; fi
+#$PREFIX/bin/luarocks install qtlua         ||  sudo -E $PREFIX/bin/luarocks install qtlua  
+#RET=$?; if [ $RET -ne 0 ]; then echo "Error. Exiting."; exit $RET; fi
+#$PREFIX/bin/luarocks install qttorch       ||  sudo -E $PREFIX/bin/luarocks install qttorch
+#RET=$?; if [ $RET -ne 0 ]; then echo "Error. Exiting."; exit $RET; fi
 $PREFIX/bin/luarocks install luafilesystem ||  sudo -E $PREFIX/bin/luarocks install luafilesystem
 RET=$?; if [ $RET -ne 0 ]; then echo "Error. Exiting."; exit $RET; fi
 $PREFIX/bin/luarocks install penlight      ||  sudo -E $PREFIX/bin/luarocks install penlight 
