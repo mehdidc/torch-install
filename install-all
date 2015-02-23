@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+######################################################################
+# Complete install:
+# Install all dependencies for Torch7, then Torch7 itself.
+######################################################################
+
+# Install dependencies
+
+curl -s https://raw.githubusercontent.com/mehdidc/torch-install/master/install-deps | bash
+RET=$?; if [ $RET -ne 0 ]; then
+    echo " "
+    echo " "
+    echo "---------------------------------------------------"
+    echo "WARNING: One of the dependencies failed to install.";
+    echo "---------------------------------------------------"
+    echo " "
+    echo " "
+fi
+# Install torch
+curl -s https://raw.githubusercontent.com/mehdidc/torch-install/master/install-luajit+torch | bash
+RET=$?; if [ $RET -ne 0 ]; then echo "Error. Exiting."; exit $RET; fi
