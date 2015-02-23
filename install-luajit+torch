@@ -85,8 +85,8 @@ $PREFIX/bin/luarocks install nn            ||  sudo -E $PREFIX/bin/luarocks inst
 RET=$?; if [ $RET -ne 0 ]; then echo "Error. Exiting."; exit $RET; fi
 $PREFIX/bin/luarocks install dok           ||  sudo -E $PREFIX/bin/luarocks install dok    
 RET=$?; if [ $RET -ne 0 ]; then echo "Error. Exiting."; exit $RET; fi
-$PREFIX/bin/luarocks install gnuplot       ||  sudo -E $PREFIX/bin/luarocks install gnuplot
-RET=$?; if [ $RET -ne 0 ]; then echo "Error. Exiting."; exit $RET; fi
+#$PREFIX/bin/luarocks install gnuplot       ||  sudo -E $PREFIX/bin/luarocks install gnuplot
+#RET=$?; if [ $RET -ne 0 ]; then echo "Error. Exiting."; exit $RET; fi
 [ -n "$cutorch" ] && \
 ($PREFIX/bin/luarocks install cutorch      ||  sudo -E $PREFIX/bin/luarocks install cutorch        ||   cutorch=failed )
 [ -n "$cunn" ] && \
