@@ -91,7 +91,7 @@ elif [[ `uname` == 'Linux' ]]; then
             #sudo apt-get install -y gnuplot-x11
             sudo apt-get install -y libsdl2-dev
             sudo apt-get install -y libgraphicsmagick1-dev
-            sudo apt-get install -y nodejs
+            #sudo apt-get install -y nodejs
             sudo apt-get install -y npm
             sudo apt-get install -y libfftw3-dev sox libsox-dev libsox-fmt-all
             sudo apt-get update
